@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <div class="topHeader">
@@ -15,13 +18,13 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <ul class="social-icon pull-left">
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
+                            <li><a href="#" class="sprt sprt-fb"></a></li>
+                            <li><a href="#" class="sprt sprt-twitter"></a></li>
+                            <li><a href="#" class="sprt sprt-insta"></a></li>
                         </ul>
                         <ul class="contact pull-right">
-                            <li><a mailto="abcd@gmail.com">acdv@gmail.com</a></li>
-                            <li><a href="" tel="998964875">987-7895-458</a></li>
+                            <li><a class="sprt sprt-email" href="mailto:abcd@gmail.com">acdv@gmail.com</a></li>
+                            <li><a class="sprt sprt-call brLeft" href="tel:998964875">987-7895-458</a></li>
                         </ul>
                     </div>
                 </div>
@@ -44,14 +47,14 @@
                     </div>
                     <div class="col-xs-5 text-right">
                         <div class="search">
-
+                            <a href=""><img src="images/search-icon.png" alt=""></a>
                         </div>
                         <div class="add-cart">
-
+                            <a href=""><img src="images/add-cart.png" alt=""></a>
                         </div>
                         <div class="btns-warp">
-                            <button class="default-btns btns">Login</button>
-                            <button class="btns pri-btns">Free SignUp</button>
+                            <button class="default-btns btns js-popup" data-target="js-loginPopup">Login</button>
+                            <button class="btns pri-btns js-popup" data-target="js-signUpPopup">Free SignUp</button>
                         </div>
                     </div>
                 </div>
@@ -83,10 +86,7 @@
                         </div>
                         <div class="info-detail">
                             <h4>Benifits of student</h4>
-                            <p>In publishing and graphic design, lorem ipsum is a placeholder text
-                                commonly used to demonstrate a placeholder text commonly used to
-                                demonstrate a placeholder text commonly used to demonstrate a
-                                placeholder text commonly used to demonstrate </p>
+                            <p>In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate a placeholder text commonly used to demonstrate a placeholder text commonly used to demonstrate a placeholder text commonly used to demonstrate </p>
                             <a href="#" class="">Know More</a>
                         </div>
                     </div>
@@ -96,11 +96,8 @@
                         </div>
                         <div class="info-detail">
                             <h4>Benifits of student</h4>
-                            <p>In publishing and graphic design, lorem ipsum is a placeholder text
-                                commonly used to demonstrate a placeholder text commonly used to
-                                demonstrate a placeholder text commonly used to demonstrate a
-                                placeholder text commonly used to demonstrate </p>
-                                <a href="#" class="">Know More</a>
+                            <p>In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate a placeholder text commonly used to demonstrate a placeholder text commonly used to demonstrate a placeholder text commonly used to demonstrate </p>
+                            <a href="#" class="">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -126,248 +123,358 @@
                         </div>
                     </div>
                     <div class="col-md-4 clearfix">
-                            <div class="stu-profile">
-                                    <div class="stu-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="stu-detail">
-                                        <p>Sonakshi kumar Sinah</p>
-                                        <span>Year : <em>2018</em></span>
-                                        <span>Year : <em>2018</em></span>
-                                        <span>Year : <em>2018</em></span>
-                                    </div>
-                                </div>
+                        <div class="stu-profile">
+                            <div class="stu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4 clearfix">
-                            <div class="stu-profile">
-                                    <div class="stu-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="stu-detail">
-                                        <p>Sonakshi kumar Sinah</p>
-                                        <span>Year : <em>2018</em></span>
-                                        <span>Year : <em>2018</em></span>
-                                        <span>Year : <em>2018</em></span>
-                                    </div>
-                                </div>
+                        <div class="stu-profile">
+                            <div class="stu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                        <div class="col-xs-12">
-                            <h3 class="upper-text head-title">2017 topper</h3>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="stu-profile clearfix">
-                                <div class="stu-img">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="stu-detail">
-                                    <p>Sonakshi kumar Sinah</p>
-                                    <span>Year : <em>2018</em></span>
-                                    <span>Year : <em>2018</em></span>
-                                    <span>Year : <em>2018</em></span>
-                                </div>
+                    <div class="col-xs-12">
+                        <h3 class="upper-text head-title">2017 topper</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stu-profile clearfix">
+                            <div class="stu-img">
+                                <img src="" alt="">
                             </div>
-                        </div>
-                        <div class="col-md-4 clearfix">
-                                <div class="stu-profile">
-                                        <div class="stu-img">
-                                            <img src="" alt="">
-                                        </div>
-                                        <div class="stu-detail">
-                                            <p>Sonakshi kumar Sinah</p>
-                                            <span>Year : <em>2018</em></span>
-                                            <span>Year : <em>2018</em></span>
-                                            <span>Year : <em>2018</em></span>
-                                        </div>
-                                    </div>
-                        </div>
-                        <div class="col-md-4 clearfix">
-                                <div class="stu-profile">
-                                        <div class="stu-img">
-                                            <img src="" alt="">
-                                        </div>
-                                        <div class="stu-detail">
-                                            <p>Sonakshi kumar Sinah</p>
-                                            <span>Year : <em>2018</em></span>
-                                            <span>Year : <em>2018</em></span>
-                                            <span>Year : <em>2018</em></span>
-                                        </div>
-                                    </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                            <div class="col-xs-12">
-                                <h3 class="upper-text head-title">2016 topper</h3>
+                    <div class="col-md-4 clearfix">
+                        <div class="stu-profile">
+                            <div class="stu-img">
+                                <img src="" alt="">
                             </div>
-                            <div class="col-md-4">
-                                <div class="stu-profile clearfix">
-                                    <div class="stu-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="stu-detail">
-                                        <p>Sonakshi kumar Sinah</p>
-                                        <span>Year : <em>2018</em></span>
-                                        <span>Year : <em>2018</em></span>
-                                        <span>Year : <em>2018</em></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 clearfix">
-                                    <div class="stu-profile">
-                                            <div class="stu-img">
-                                                <img src="" alt="">
-                                            </div>
-                                            <div class="stu-detail">
-                                                <p>Sonakshi kumar Sinah</p>
-                                                <span>Year : <em>2018</em></span>
-                                                <span>Year : <em>2018</em></span>
-                                                <span>Year : <em>2018</em></span>
-                                            </div>
-                                        </div>
-                            </div>
-                            <div class="col-md-4 clearfix">
-                                    <div class="stu-profile">
-                                            <div class="stu-img">
-                                                <img src="" alt="">
-                                            </div>
-                                            <div class="stu-detail">
-                                                <p>Sonakshi kumar Sinah</p>
-                                                <span>Year : <em>2018</em></span>
-                                                <span>Year : <em>2018</em></span>
-                                                <span>Year : <em>2018</em></span>
-                                            </div>
-                                        </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
                             </div>
                         </div>
-                        <div class="row brB">
-                                <div class="col-xs-12">
-                                    <h3 class="upper-text head-title">2015 topper</h3>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="stu-profile clearfix">
-                                        <div class="stu-img">
-                                            <img src="" alt="">
-                                        </div>
-                                        <div class="stu-detail">
-                                            <p>Sonakshi kumar Sinah</p>
-                                            <span>Year : <em>2018</em></span>
-                                            <span>Year : <em>2018</em></span>
-                                            <span>Year : <em>2018</em></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 clearfix">
-                                        <div class="stu-profile">
-                                                <div class="stu-img">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="stu-detail">
-                                                    <p>Sonakshi kumar Sinah</p>
-                                                    <span>Year : <em>2018</em></span>
-                                                    <span>Year : <em>2018</em></span>
-                                                    <span>Year : <em>2018</em></span>
-                                                </div>
-                                            </div>
-                                </div>
-                                <div class="col-md-4 clearfix">
-                                        <div class="stu-profile">
-                                                <div class="stu-img">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="stu-detail">
-                                                    <p>Sonakshi kumar Sinah</p>
-                                                    <span>Year : <em>2018</em></span>
-                                                    <span>Year : <em>2018</em></span>
-                                                    <span>Year : <em>2018</em></span>
-                                                </div>
-                                            </div>
-                                </div>
+                    </div>
+                    <div class="col-md-4 clearfix">
+                        <div class="stu-profile">
+                            <div class="stu-img">
+                                <img src="" alt="">
                             </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 class="upper-text head-title">2016 topper</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stu-profile clearfix">
+                            <div class="stu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 clearfix">
+                        <div class="stu-profile">
+                            <div class="stu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 clearfix">
+                        <div class="stu-profile">
+                            <div class="stu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row brB">
+                    <div class="col-xs-12">
+                        <h3 class="upper-text head-title">2015 topper</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stu-profile clearfix">
+                            <div class="stu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 clearfix">
+                        <div class="stu-profile">
+                            <div class="stu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 clearfix">
+                        <div class="stu-profile">
+                            <div class="stu-img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="stu-detail">
+                                <p>Sonakshi kumar Sinah</p>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                                <span>Year : <em>2018</em></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <h3 class="upper-text head-title">testimonial</h3>
                     </div>
                     <div class="col-xs-12">
-                        <div class="owl-carousel clearfix">
+                        <div class="owl-carousel owlCarousel clearfix">
                             <div class="testi-profile">
                                 <div class="testi-img">
                                     <img src="" alt="">
                                 </div>
                                 <div class="testi-detail">
                                     <h4>Mahesh Taygi</h4>
-                                    <p>In publishing and graphic design, lorem ipsum is a
-                                            placeholder text commonly used to demonstrate In
-                                            publishing and graphic design, lorem ipsum is a  text
-                                            commonly used to demonstrate In publishing and graphic
-                                            design, lorem ipsum is a</p>
+                                    <p>In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a</p>
                                 </div>
                             </div>
                             <div class="testi-profile">
-                                    <div class="testi-img">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="testi-detail">
-                                        <h4>Mahesh Taygi</h4>
-                                        <p>In publishing and graphic design, lorem ipsum is a
-                                                placeholder text commonly used to demonstrate In
-                                                publishing and graphic design, lorem ipsum is a  text
-                                                commonly used to demonstrate In publishing and graphic
-                                                design, lorem ipsum is a</p>
-                                    </div>
+                                <div class="testi-img">
+                                    <img src="" alt="">
                                 </div>
-                                <div class="testi-profile">
-                                        <div class="testi-img">
-                                            <img src="" alt="">
-                                        </div>
-                                        <div class="testi-detail">
-                                            <h4>Mahesh Taygi</h4>
-                                            <p>In publishing and graphic design, lorem ipsum is a
-                                                    placeholder text commonly used to demonstrate In
-                                                    publishing and graphic design, lorem ipsum is a  text
-                                                    commonly used to demonstrate In publishing and graphic
-                                                    design, lorem ipsum is a</p>
-                                        </div>
-                                    </div>
+                                <div class="testi-detail">
+                                    <h4>Mahesh Taygi</h4>
+                                    <p>In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a</p>
+                                </div>
+                            </div>
+                            <div class="testi-profile">
+                                <div class="testi-img">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="testi-detail">
+                                    <h4>Mahesh Taygi</h4>
+                                    <p>In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a</p>
+                                </div>
+                            </div>
+                            <div class="testi-profile">
+                                <div class="testi-img">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="testi-detail">
+                                    <h4>Mahesh Taygi</h4>
+                                    <p>In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a</p>
+                                </div>
+                            </div>
+                            <div class="testi-profile">
+                                <div class="testi-img">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="testi-detail">
+                                    <h4>Mahesh Taygi</h4>
+                                    <p>In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a</p>
+                                </div>
+                            </div>
+                            <div class="testi-profile">
+                                <div class="testi-img">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="testi-detail">
+                                    <h4>Mahesh Taygi</h4>
+                                    <p>In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a text commonly used to demonstrate In publishing and graphic design, lorem ipsum is a</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </div>
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
                     <ul class="quick-link">
-                            <li><a href="">About us</a></li>
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">Site Feedback</a></li>
-                            <li><a href="">Career</a></li>
-                            <li><a href="">Terms & Consitions</a></li>
-                            <li><a href="">Sitemap</a></li>
-                            <li><a href="">Support</a></li>
-                            <li><a href="">Privacy Policy</a></li>
-                        </ul>
-                        <ul class="footer-social">
-                            <li><a href=""><img src="images/fb.png" alt=""></a></li>
-                            <li><a href=""><img src="images/twitter.png" alt=""></a></li>
-                            <li><a href=""><img src="images/insta.png" alt=""></a></li>
-                        </ul>
-                        <div class="footer-payment">
-                            <h4>Payment Methods</h4>
-                            <img src="images/paymentModes.png" alt="">
-                        </div>
-            </div>
-            <div class="col-xs-12">
-                <div class="copy-right">
-                    <p>Copyright &copy; 2018 Modas</p>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Site Feedback</a></li>
+                        <li><a href="">Career</a></li>
+                        <li><a href="">Terms & Consitions</a></li>
+                        <li><a href="">Sitemap</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                    <ul class="footer-social">
+                        <li><a href=""><img src="images/fb.png" alt=""></a></li>
+                        <li><a href=""><img src="images/twitter.png" alt=""></a></li>
+                        <li><a href=""><img src="images/insta.png" alt=""></a></li>
+                    </ul>
+                    <div class="footer-payment">
+                        <h4>Payment Methods</h4>
+                        <img src="images/paymentModes.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="copy-right">
+                        <p>Copyright &copy; 2018 Modas</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-</footer>
+        <div class="modal-wrapper js-loginPopup">
+            <div class="modal">
+                <div class="head">
+                <p><strong>Login</strong> </p>
+                    <a class="btn-close js-closePopup" href="javascript:;"></a>
+                </div>
+                <div class="content login">
+                    <form action="" method="" class="" role="form">
+                        <div id="" class="form-group">
+                            <input id="username" class="form-control" name="username" type="text" size="18" alt="login" required="">
+                            <span class="form-highlight"></span>
+                            <span class="form-bar"></span>
+                            <div class="errorMsg">Please enter Login Name</div>
+                            <label for="username" class="float-label">login</label>
+                        </div>
+                        <div id="" class="form-group">
+                            <input id="passwd" class="form-control" name="password" type="password" size="18" alt="password" required="">
+                            <span class="form-highlight"></span>
+                            <span class="form-bar"></span>
+                            <label for="password" class="float-label">password</label>
+                            <a href="#" class="password-visible"><img src="images/visible-password.png" alt=""></a>
+                        </div>
+                        <div>
+                           <button class="default-btns btns secBtn">Login</button>
+                           <a href="" class="pull-right pass-forget link">Forget Password</a>
+                        </div>
+                    </form>
+                    <div class="or">
+                        <span>or</span>
+                    </div>
+                    <div class="social-login">
+                        <p>Login with your social network</p>
+                        <div class="btns-warp clearfix">
+                            <button class="btns fbBtn">Facebook</button>
+                            <button class="btns gBtn pull-right">Gmail</button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="pdT25">Don't Have an account? <a href="#" class="link">Sign Up </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-wrapper js-signUpPopup">
+            <div class="modal">
+                <div class="head">
+                <p><strong>Sign Up</strong> </p>
+                    <a class="btn-close js-closePopup" href="javascript:;"></a>
+                </div>
+                <div class="content login">
+                    <form action="" method="" class="" role="form">
+                        <div id="" class="form-group">
+                            <input id="" class="form-control" name="username" type="text" size="18" alt="login" required="">
+                            <span class="form-highlight"></span>
+                            <span class="form-bar"></span>
+                            <label for="username" class="float-label">Full Name</label>
+                        </div>
+                        <div id="" class="form-group">
+                            <input id="" class="form-control" name="username" type="text" size="18" alt="login" required="">
+                            <span class="form-highlight"></span>
+                            <span class="form-bar"></span>
+                            <label for="username" class="float-label">Mobile Number</label>
+                        </div>
+                        <div id="" class="form-group">
+                            <input id="" class="form-control" name="username" type="text" size="18" alt="login" required="">
+                            <span class="form-highlight"></span>
+                            <span class="form-bar"></span>
+                            <label for="username" class="float-label">Email</label>
+                        </div>
+                        <div id="" class="form-group">
+                            <input id="passwd" class="form-control" name="password" type="password" size="18" alt="password" required="">
+                            <span class="form-highlight"></span>
+                            <span class="form-bar"></span>
+                            <label for="password" class="float-label">Password</label>
+                            <a href="#" class="password-visible"><img src="images/visible-password.png" alt=""></a>
+                        </div>
+                        <div id="" class="form-group">
+                            <input id="confirm-passwd" class="form-control" name="password" type="password" size="18" alt="password" required="">
+                            <span class="form-highlight"></span>
+                            <span class="form-bar"></span>
+                            <label for="password" class="float-label">Confirm Password</label>
+                            <a href="#" class="password-visible"><img src="images/visible-password.png" alt=""></a>
+                        </div>
+                        <div>
+                           <button class="default-btns btns secBtn">Login</button>
+                        </div>
+                    </form>
+                    <div class="text-center">
+                        <p class="pdT25">Have an account?<a href="#" class="link"> Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/global.js"></script>
 </body>
+
 </html>
