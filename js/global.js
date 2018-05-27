@@ -1,3 +1,5 @@
+var winW = $(window).width();
+
 var carousel = {
     config: {
         wrapper: '.owlCarousel',
@@ -10,7 +12,7 @@ var carousel = {
         autoplayHoverPause: false,
         margin: 10,
         navText: ["<img src='images/back.png'>","<img src='images/next.png'>"],
-
+        responsive: false
 
     },
 
@@ -20,11 +22,10 @@ var carousel = {
         this.render();
     },
     cacheDom: function() {
-        this.$wrapper = $('.owlCarousel')
-        this.$item = this.$wrapper.find('.item');
+        var wrapper = carousel.config.wrapper;
     },
     render: function() {
-        this.$wrapper.owlCarousel({
+        $(carousel.config.wrapper).owlCarousel({
             loop: carousel.config.loop,
             nav: carousel.config.nav,
             items: carousel.config.items,
@@ -32,7 +33,20 @@ var carousel = {
             autoplayTimeout: carousel.config.autoplayTimeout,
             autoplayHoverPause: carousel.config.autoplayHoverPause,
             margin: carousel.config.margin,
-            navText: carousel.config.navText
+            navText: carousel.config.navText,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    items : carousel.config.mobile
+                },
+                // breakpoint from 768 up
+                768 : {
+                    items : carousel.config.tab
+                },
+                992:{
+                    items: carousel.config.desktop
+                }
+            }
         });
     },
     setHeight: function() {
@@ -52,10 +66,38 @@ $(document).ready(function() {
             items: 3,
             margin: 10,
             navText: ["<img src='images/back.png'>","<img src='images/next.png'>"],
+            autoplay: false,
+            responsive: true,
+            desktop:3,
+            mobile:1
+        })
+    }
+    if($('.info-carousel').length && winW < 768){
+        
+        carousel.init({
+            wrapper: '.info-carousel',
+            items: 1,
+            margin: 10,
+            navText: ["<img src='images/back.png'>","<img src='images/next.png'>"],
+            autoplay: false
+        })
+    }
+    if($('.stu-carousel').length && winW <768){
+        carousel.init({
+            wrapper: '.stu-carousel',
+            items: 1,
+            margin: 10,
+            navText: ["<img src='images/back.png'>","<img src='images/next.png'>"],
             autoplay: false
         })
     }
 
+    if($('.humburger').length && winW <768){
+        $('.humburger').click(function(){
+            $(this).toggleClass('open');
+            $('.main-navigation').slideToggle();
+        });
+    }
     $('.js-popup').click(function() {
         var target = $(this).attr('data-target');
         $('.'+target).addClass('open');
