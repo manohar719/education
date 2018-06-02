@@ -20,6 +20,9 @@
         min-height: 125px;
         padding: 5px 8px;
     }
+    .contact a {
+        pointer-events: auto;
+    }
 }
 
 /* Medium devices (landscape tablets, 767px and down) */
