@@ -98,13 +98,27 @@ $(document).ready(function() {
             $('.main-navigation').slideToggle();
         });
     }
-    $('.js-popup').click(function() {
+    $('.js-popup').click(function(e) {
+        e.preventDefault();
         var target = $(this).attr('data-target');
+        $('.modal-wrapper').removeClass('open');
         $('.'+target).addClass('open');
         $('.page-wrapper').addClass('blur');
         return false;
     });
-
+    if($('.password-visible').length){
+            $('.password-visible').on('click',function(e){
+                e.preventDefault();
+                if($(this).hasClass('active')){
+$(this).removeClass('active');
+                 $(this).parents('.form-group').find('input').attr('type','password'); 
+                }else{
+                   $(this).addClass('active');
+                 $(this).parents('.form-group').find('input').attr('type','text');  
+                }
+                 
+            })
+    }
     $('.js-closePopup').click(function(){
         if($(this).parents('.modal-wrapper').hasClass('open')){
             $(this).parents('.modal-wrapper').removeClass('open');
