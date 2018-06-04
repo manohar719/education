@@ -62,10 +62,11 @@ input, textarea {
 }
 .btns {
   display: inline-block;
- padding: 2px 10px;
+  padding: 2px 10px;
   background: #898989;
   margin-left: 15px;
   color: #fff;
+  position: relative;
   font-size: 16px;
 }
 .btns:hover{
@@ -457,19 +458,7 @@ margin-bottom: 20px;
 .input-group {
 position: relative;
 }
-.form-control {
-display: block;
-height: 36px;
-width: 100%;
-border: none;
-border-radius: 0 !important;
-font-size: 16px;
-font-weight: 300;
-padding: 0;
-background-color: transparent;
-box-shadow: none;
-border-bottom: 1px solid #dadada;
-}
+.form-control {display: block;height: 36px;width: 100%;border: none;border-radius: 0 !important;font-size: 16px;font-weight: 300;padding: 0;padding-top: 1rem;background-color: transparent;box-shadow: none;border-bottom: 1px solid #dadada;}
 .input-group .form-control {
 position: relative;
 z-index: inherit;
@@ -511,11 +500,7 @@ pointer-events: none;
 }
 /* active state */
 .form-control:focus ~ .float-label,
-.form-control:valid ~ .float-label {
-top: -12px;
-font-size: 12px;
-left: 0;
-}
+.form-control:valid ~ .float-label {top: -6px;font-size: 12px;left: 0;}
 /* input colors ---- */
 .form-control:focus ~ label {
 color: #03a9f4;
@@ -760,13 +745,7 @@ margin-top: 0;
 opacity:1;
 }
 
-.head{
-width: 100%;
-/* height:32px; */
-padding: 11px 20px;
-overflow:hidden;
-background: #01bce500;
-}
+.head{width: 100%;/* height:32px; */padding: 20px 20px 0px 20px;overflow:hidden;background: #01bce500;}
 
 .btn-close{
 width: 19px;
@@ -816,6 +795,12 @@ filter: blur(5px);
   display: inline-block;
   margin-top: -5px;
 }
+.head p strong{
+  font-size:2.2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
 .login .btns{
   margin: 5px 0;
   margin-left: 0;
@@ -832,6 +817,48 @@ p.pdT25{
   background: #0094aa;
   color: #fff;
 }
+.login .btns.secBtn.loaderActive{
+  color:transparent;
+}
+.loaderN {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  }
+
+.loaderActive {
+  color: transparent; }
+  .loaderActive .loaderN {
+    opacity: 1; }
+
+.loader-4 span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  margin: 9px 2px 0 2px;
+  opacity: 0;
+  }
+
+.loader-4 span:nth-child(1) {
+  animation: opacitychange 1s ease-in-out infinite; }
+
+.loader-4 span:nth-child(2) {
+  animation: opacitychange 1s ease-in-out 0.33s infinite; }
+
+.loader-4 span:nth-child(3) {
+  animation: opacitychange 1s ease-in-out 0.66s infinite; }
+
+@keyframes opacitychange {
+  0%,
+     100% {
+    opacity: 0; }
+  60% {
+    opacity: 1; } }
 .pass-forget{
   padding: 8px 0;
 }
@@ -849,8 +876,18 @@ p.pdT25{
 }
 .btns.fbBtn,.btns.gBtn{
   min-width: 130px;
-  padding-left: 30px;
+  padding: 8px 0;
+  padding-left: 26px;
   color: #fff;
+  /* padding: 8px 0; */
+}
+.btns.fbBtn{
+  background: #4b6ea8 url('../images/facebook-letter-logo.png') no-repeat 8px 6px;
+  background-size: 20%;
+}
+.btns.gBtn {
+    background: #f14336 url(../images/google-logo.png) no-repeat 13px 6px;
+    background-size: 20%;
 }
 .fbBtn{
 background-color: #4b6ea8;
@@ -860,10 +897,10 @@ background-color: #f14336;
 }
 .errorMsg{
   position: absolute;
-  bottom: -20px;
-  left: 5px;
+  bottom: -16px;
+  left: 0;
   color: red;
-  font-size: 12px;
+  font-size: 11px;
 }
 .owl-nav{
   position: absolute;
@@ -878,4 +915,18 @@ opacity: 0.2;
 }
 .owl-carousel.info-carousel,.stu-carousel.owl-carousel{
   display: block;
+}
+a.password-visible.active:after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    background: #b5b5b5;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /* border: 15px solid #ccc; */
+    left: -2px;
+    top: 10px;
 }
