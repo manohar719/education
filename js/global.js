@@ -95,16 +95,45 @@ $(document).ready(function() {
     if($('.humburger').length && winW <768){
         $('.humburger').click(function(){
             $(this).toggleClass('open');
-            $('.main-navigation').slideToggle();
+            $('.main-navigation').toggleClass('active');
+        });
+    }
+    if($('.main-navigation').length && winW<768){
+        $('.main-navigation li>a').on('click',function(e){
+            e.preventDefault();
+            if( $(this).hasClass('active')){
+                $(this).removeClass('active')
+                $(this).parent().siblings('li').find('.dropdown').slideUp();
+                $(this).siblings('.dropdown').slideUp();
+            }else{
+
+            
+            $(this).addClass('active')
+            $(this).parent().siblings('li').find('.dropdown').slideUp();
+            $(this).siblings('.dropdown').slideDown();
+        }
         });
     }
     $('.js-popup').click(function() {
         var target = $(this).attr('data-target');
+        $('.modal-wrapper').removeClass('open');
         $('.'+target).addClass('open');
         $('.page-wrapper').addClass('blur');
         return false;
     });
-
+    if($('.password-visible').length){
+            $('.password-visible').on('click',function(e){
+                e.preventDefault();
+                if($(this).hasClass('active')){
+$(this).removeClass('active');
+                 $(this).parents('.form-group').find('input').attr('type','password'); 
+                }else{
+                   $(this).addClass('active');
+                 $(this).parents('.form-group').find('input').attr('type','text');  
+                }
+                 
+            })
+    }
     $('.js-closePopup').click(function(){
         if($(this).parents('.modal-wrapper').hasClass('open')){
             $(this).parents('.modal-wrapper').removeClass('open');
@@ -142,3 +171,20 @@ $('.gototop').click(function(event) {
         scrollTop: $("body").offset().top
     }, 500);
 });
+
+
+// dashboard js functions start here
+$(".accordProfile").on("click", ".accordLi .toggle", function() {
+
+    // if($(this).hasClass('active')){
+    //     $('.accordion-header').next().removeClass('active').slideUp();
+    // }
+    // $(this).next().addClass("active").slideDown();
+    event.preventDefault();
+
+       $(this).toggleClass("active").next().slideToggle();
+
+       $(this).parent().siblings('li').find(".inner").slideUp();
+       $(this).parent().siblings('li').find("a").removeClass('active')
+ });
+// dashboard js functions end here
