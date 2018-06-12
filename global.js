@@ -95,23 +95,7 @@ $(document).ready(function() {
     if($('.humburger').length && winW <768){
         $('.humburger').click(function(){
             $(this).toggleClass('open');
-            $('.main-navigation').toggleClass('active');
-        });
-    }
-    if($('.main-navigation').length && winW<768){
-        $('.main-navigation li>a').on('click',function(e){
-            e.preventDefault();
-            if( $(this).hasClass('active')){
-                $(this).removeClass('active')
-                $(this).parent().siblings('li').find('.dropdown').slideUp();
-                $(this).siblings('.dropdown').slideUp();
-            }else{
-
-            
-            $(this).addClass('active')
-            $(this).parent().siblings('li').find('.dropdown').slideUp();
-            $(this).siblings('.dropdown').slideDown();
-        }
+            $('.main-navigation').slideToggle();
         });
     }
     $('.js-popup').click(function(e) {
@@ -172,20 +156,3 @@ $('.gototop').click(function(event) {
         scrollTop: $("body").offset().top
     }, 500);
 });
-
-
-// dashboard js functions start here
-$(".accordProfile").on("click", ".accordLi .toggle", function() {
-
-    // if($(this).hasClass('active')){
-    //     $('.accordion-header').next().removeClass('active').slideUp();
-    // }
-    // $(this).next().addClass("active").slideDown();
-    event.preventDefault();
-
-       $(this).toggleClass("active").next().slideToggle();
-
-       $(this).parent().siblings('li').find(".inner").slideUp();
-       $(this).parent().siblings('li').find("a").removeClass('active')
- });
-// dashboard js functions end here
