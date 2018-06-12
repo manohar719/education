@@ -901,6 +901,11 @@ background-color: #f14336;
   left: 0;
   color: red;
   font-size: 11px;
+
+}
+.mobile_login{
+  display: none;
+
 }
 .owl-nav{
   position: absolute;
